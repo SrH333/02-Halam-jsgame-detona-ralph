@@ -1,0 +1,1 @@
+Eu tentei inserir dois botões após o game over, um para continuar o jogo com os records anteriores salvos na tabelas e o outro para Exit, mas não consegui programar.

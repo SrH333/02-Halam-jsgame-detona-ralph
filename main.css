@@ -1,64 +1,96 @@
 /* main.css */
 body {
-    font-family: 'Press Start 2P', sans-serif;
-    background-color: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 800px;
-    margin: auto;
-  }
-  
-  .menu {
-    display: flex;
-    justify-content: space-between;
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .panel {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-  }
-  
+  font-family: 'Press Start 2P', sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.panel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: #bbb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.square.enemy {
+  background-color: red;
+}
+
+.square.enemy:hover {
+  background-color: darkred;
+}
+
+/* Tela de Game Over */
+.game-over {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 1000;
+}
+
+.game-over button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.continue-button {
+  background-color: blue;
+  color: white;
+}
+
+.exit-button {
+  background-color: red;
+  color: white;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
   .square {
-    width: 100px;
-    height: 100px;
-    background-color: #bbb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    transition: background-color 0.3s;
+    width: 80px;
+    height: 80px;
   }
-  
-  .square.enemy {
-    background-color: red;
+
+  .menu h2 {
+    font-size: 14px;
   }
-  
-  .square.enemy:hover {
-    background-color: darkred;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 600px) {
-    .square {
-      width: 80px;
-      height: 80px;
-    }
-  
-    .menu h2 {
-      font-size: 14px;
-    }
-  }
-  
+}
